@@ -26,7 +26,7 @@ include "connect.php";
             <th>邮回中国：</th>
             <th>邮寄重量：</th>
             <th>邮寄价格：</th>
-            <th>银行：</th>
+            <th>银行卡：</th>
             <th>银行状态：</th>
             <th>退货：</th>
           </tr>
@@ -88,5 +88,5 @@ include "connect.php";
         </tfoot>
       </table>
     </div>
-    
+
 <?php include "footer.php" ?>

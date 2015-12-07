@@ -86,10 +86,10 @@ include "connect.php";
           <div class="form-group">
             <i class="fa fa-credit-card"></i> <label>银行卡：</label>
             <select class="form-control" name="Bank">
-              <option value="转账中">Discover</option>
-              <option value="已划走">Amex</option>
-              <option value="等待退款">Chase</option>
-              <option value="已退款">PNC</option>
+              <option value="Discover">Discover</option>
+              <option value="Amex">Amex</option>
+              <option value="Chase">Chase</option>
+              <option value="PNC">PNC</option>
             </select>
           </div>
 
