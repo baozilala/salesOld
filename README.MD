@@ -3,8 +3,6 @@
 
 
 <table>
-  <tr>
-    <td>2.修改 orders.php 下的 银行卡，当查询订单的时候，银行卡会显示成银行状态，原因是 add.php 下的银行卡select 数据不对。</td>
-    <td>1.Submit project to github.</td>
-  </tr>
+  <tr>2.修改 orders.php 下的 银行卡，当查询订单的时候，银行卡会显示成银行状态，原因是 add.php 下的银行卡select 数据不对。</tr>
+  <tr>1.Submit project to github.</tr>
 </table>
