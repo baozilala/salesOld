@@ -2,7 +2,7 @@
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="index.php">
-          客户订单管理系统
+          <i class="fa fa-users"></i> 客户订单管理系统
         </a>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>

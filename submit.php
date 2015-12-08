@@ -31,7 +31,6 @@ $sql="INSERT INTO
         '$_POST[BuyingPrice]',
         now(),
         '$_POST[Unit]',
-        '$_POST[PackageReturn]'
         '$_POST[ShipStatus]',
         '$_POST[ShipChina]',
         '$_POST[ShipWeight]',

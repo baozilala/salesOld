@@ -5,7 +5,7 @@ include "connect.php";
 ?>
 
 <header class="title page-header text-center">
-  <h1>客户订单管理系统</h1>
+  <h1><i class="fa fa-users"></i> 客户订单管理系统</h1>
 </header>
 
 <div class="container">

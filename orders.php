@@ -29,6 +29,7 @@ include "connect.php";
             <th>银行卡：</th>
             <th>银行状态：</th>
             <th>退货：</th>
+            <th>Actions:</th>
           </tr>
         </thead>
 
@@ -56,7 +57,7 @@ include "connect.php";
 
               <td>
                 <?php
-              if ($row['PackageReturn'] == 0 ) {
+              if ($row['PackageReturn'] == 0 or $row['PackageReturn'] == 'null' ) {
                 echo "不需退货";
               }elseif ($row['PackageReturn'] == 1) {
                 echo "需要退货";
@@ -65,6 +66,12 @@ include "connect.php";
               }
               ?></td>
 
+              <td>
+                  <ul class="list-unstyled">
+                    <li class="text-left"><a href="edit.php?id=<?php echo $row['id'] ?>">E</a></li>
+                    <li class="text-right"><a class="text-danger" href="#">D</a></li>
+                  </ul>
+              </td>
             </tr>
           </tbody>
         <?php

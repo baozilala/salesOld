@@ -36,7 +36,7 @@ include "connect.php";
 
           <div class="form-group">
             <i class="fa fa-font"></i> <label>物品名称：</label>
-            <input type="text" class="form-control" name="ProductName" placeholder="产品名称">
+            <input type="textarea" class="form-control" name="ProductName" placeholder="产品名称">
           </div>
 
           <div class="form-group">
@@ -106,6 +106,7 @@ include "connect.php";
           <div class="form-group">
             <i class="fa fa-truck"></i> <label>是否退货：</label>
             <select class="form-control" name="PackageReturn">
+              <option value=""></option>
               <option value="0">不需退货</option>
               <option value="1">需要退货</option>
               <option value="2">已经退货</option>
