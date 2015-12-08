@@ -18,7 +18,7 @@ include "connect.php";
               /*This php include Select Customers Name*/
               $Customer_List = mysql_query("SELECT * FROM customers");
               while ($CustomerName = mysql_fetch_array($Customer_List)) {
-                echo "<option value='" . $CustomerName['Name'] .  "'>". $CustomerName['Name'] . "</option>";
+                echo "<option value='" . $CustomerName['Name'] . "'>" . $CustomerName['Name'] . "</option>";
               }
               ?>
             </select>

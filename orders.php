@@ -6,10 +6,8 @@ include "connect.php";
     <header class="title page-header text-center">
       <h1>All Order List</h1>
     </header>
-    <div class="col-md-12">
-      <?php
-      $Order_List = mysql_query("SELECT * FROM orders LIMIT 20");
-      ?>
+    <div class="col-md-12 table-responsive">
+      <?php $Order_List = mysql_query("SELECT * FROM orders LIMIT 20");?>
       <table class="table table-striped table-bordered table-hover">
         <thead>
           <tr>
