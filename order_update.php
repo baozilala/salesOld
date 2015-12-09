@@ -8,6 +8,11 @@ include "connect.php";
   <h1>订单修改</h1>
 </header>
 <?php
+  if (!empty($_POST['ReturnTracking'])) {
+    $upda="UPDATE orders SET ReturnTracking='$_POST[ReturnTracking]' WHERE id = $_POST[id]";
+    mysql_query($upda,$con);
+  }
+
   $sql = "UPDATE orders SET Name = '$_POST[Name]',
     OrderNumber='$_POST[OrderNumber]',
     OrderSite='$_POST[OrderSite]',

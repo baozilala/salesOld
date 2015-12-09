@@ -46,7 +46,6 @@ include "connect.php";
         <thead>
           <tr>
             <th>姓名：</th>
-            <th>昵称：</th>
             <th>电话：</th>
             <th>地址：</th>
             <th>邮编：</th>
@@ -61,7 +60,6 @@ include "connect.php";
           <tbody>
             <tr>
               <td><?php echo $row['Name'] ?></td>
-              <td><?php echo $row['Alias'] ?></td>
               <td><?php echo $row['Phone'] ?></td>
               <td><?php echo $row['Address'] ?></td>
               <td><?php echo $row['Zip'] ?></td>

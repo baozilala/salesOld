@@ -7,8 +7,8 @@ include "connect.php";
       <h1>Order Record</h1>
     </header>
     <div class="row">
-      <div class="col-md-5"></div>
-      <div class="col-md-2">
+
+      <div class="col-md-2 col-md-offset-5">
         <form class="text-center" action="submit.php" method="post">
           <!-- <input type="text" name="Name" placeholder="姓名" value=""> -->
           <div class="form-group">
@@ -32,6 +32,11 @@ include "connect.php";
           <div class="form-group">
             <i class="fa fa-amazon"></i> <label>订单网站：</label>
             <input type="text" class="form-control" name="OrderSite" placeholder="订单网站">
+          </div>
+
+          <div class="form-group">
+            <i class="fa fa-amazon"></i> <label>订单网站连接：</label>
+            <input type="text" class="form-control" name="OrderSiteUrl" placeholder="订单网站">
           </div>
 
           <div class="form-group">

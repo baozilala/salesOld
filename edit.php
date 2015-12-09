@@ -3,14 +3,13 @@ include "header.php";
 include "navigation.php";
 include "connect.php";
 ?>
-    <header class="title page-header text-center">
-      <h1>订单修改</h1>
-    </header>
+<header class="title page-header text-center">
+  <h1>订单修改</h1>
+</header>
 <div class="row">
-  <div class="col-xs-5"></div>
-  <div class="col-xs-12 col-md-2 text-center">
+  <div class="col-sm-12 col-md-2 col-md-offset-5 text-center">
     <?php
-    $Order_List = mysql_query("SELECT id, Name, OrderNumber, OrderSite, ProductName, Price, BuyingPrice, BuyingDate, Unit, ShipStatus, ShipChina, ShipWeight, ShipPrice, Bank, BankStatus, PackageReturn FROM orders WHERE id = $_GET[id]");
+    $Order_List = mysql_query("SELECT * FROM orders WHERE id = $_GET[id]");
     ?>
       <form class="" action="order_update.php" method="post">
       <?php
@@ -110,6 +109,12 @@ include "connect.php";
                 <option value='1'>需要退货</option>
               </select>
               ";
+
+              echo "
+              <label>Tracking Number</label>
+              <input class='form-control' type='text' name='ReturnTracking' value='". $row['ReturnTracking'] ."' />
+              ";
+
             }
             ?>
 
