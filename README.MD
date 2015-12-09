@@ -40,11 +40,10 @@ Orders表格（不包含本行）：
 
 <h4>更新日志：</h4>
 <pre>
-  4.
-    添加退货的时候填写 tracking Number 功能，在orders.php页面，如果已经退货，将显示一个连接，点击后自动跳转到谷歌+tracking Number。
-    删除了 mysql 中的 alias，然后更新了上面的SQL语句。
   3.
     调整了消费统计的界面，订单修改的提交按钮。
+    添加退货的时候填写 tracking Number 功能，在orders.php页面，如果已经退货，将显示一个连接，点击后自动跳转到谷歌+tracking Number。
+    删除了 mysql 中的 alias，然后更新了上面的SQL语句。
 
   2.
     修改 orders.php 下的 银行卡，当查询订单的时候，银行卡会显示成银行状态，原因是 add.php 下的银行卡select 数据不对。
