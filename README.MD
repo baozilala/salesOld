@@ -40,6 +40,8 @@ Orders表格（不包含本行）：
 
 <h4>更新日志：</h4>
 <pre>
+  4.
+    改变了orders.php显示的方式，调整宽度太长的问题。
   3.
     调整了消费统计的界面，订单修改的提交按钮。
     添加退货的时候填写 tracking Number 功能，在orders.php页面，如果已经退货，将显示一个连接，点击后自动跳转到谷歌+tracking Number。

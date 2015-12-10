@@ -22,4 +22,5 @@
       ]
   };
   var myBarChart = new Chart(ctx).Bar(data);
+
   });

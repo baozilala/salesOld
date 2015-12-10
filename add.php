@@ -60,6 +60,11 @@ include "connect.php";
           </div>
 
           <div class="form-group">
+            <label>日期：</label>
+            <input type="date" class="form-control" name="BuyingDate">
+          </div>
+
+          <div class="form-group">
             <i class="fa fa-truck"></i> <label>商家发货：</label>
             <select class="form-control" name="ShipStatus">
               <option value="未发货">未发货</option>
@@ -117,8 +122,6 @@ include "connect.php";
               <option value="2">已经退货</option>
             </select>
           </div>
-
-          <input type="hidden" name="BuyingDate">
           <div class="form-group">
               <input type="submit" name="name" value="提交">
           </div>
