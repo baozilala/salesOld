@@ -68,7 +68,46 @@ include "connect.php";
             </div>
             <div class="form-group">
               <lable>银行状态：</lable>
-              <input class='form-control' type="text" name="BankStatus" value="<?php echo $row['BankStatus'] ?>">
+              <?php
+                if ($row['BankStatus']=='转账中') {
+                  echo "
+                  <select class='form-control' name='BankStatus'>
+                    <option value='转账中'>转账中</option>
+                    <option value='已划走'>已经划走</option>
+                    <option value='等待退款'>等待退款</option>
+                    <option value='已退款'>已退款</option>
+                  </select>
+                  ";
+                }elseif ($row['BankStatus']=='已划走') {
+                  echo "
+                  <select class='form-control' name='BankStatus'>
+                    <option value='已划走'>已经划走</option>
+                    <option value='转账中'>转账中</option>
+                    <option value='等待退款'>等待退款</option>
+                    <option value='已退款'>已退款</option>
+                  </select>
+                  ";
+                }elseif ($row['BankStatus']=='等待退款') {
+                  echo "
+                  <select class='form-control' name='BankStatus'>
+                    <option value='等待退款'>等待退款</option>
+                    <option value='已划走'>已经划走</option>
+                    <option value='转账中'>转账中</option>
+                    <option value='已退款'>已退款</option>
+                  </select>
+                  ";
+                }else {
+                  echo "
+                  <select class='form-control' name='BankStatus'>
+                    <option value='已退款'>已退款</option>
+                    <option value='等待退款'>等待退款</option>
+                    <option value='已划走'>已经划走</option>
+                    <option value='转账中'>转账中</option>
+                  </select>
+                  ";
+                }
+
+               ?>
             </div>
             <td>
               <?php
