@@ -86,6 +86,10 @@ include "connect.php";
         }
         ?>
         </div>
+        <div class="">
+          <label for="">备注：</label>
+          <?php echo $row['Notes']; ?>
+        </div>
        <?php } ?>
     </div>
   </div>

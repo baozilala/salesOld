@@ -55,6 +55,14 @@ include "connect.php";
               <input class='form-control' type="text" name="ShipChina" value="<?php echo $row['ShipChina'] ?>">
             </div>
             <div class="form-group">
+              <lable>邮寄日期：</lable>
+              <input class='form-control' type="date" name="ShipChinaDate" value="<?php echo $row['ShipChinaDate'] ?>">
+            </div>
+            <div class="form-group">
+              <lable>邮寄包裹数量：</lable>
+              <input class='form-control' type="number" name="ShipChinaPackages" value="<?php echo $row['ShipChinaPackages'] ?>">
+            </div>
+            <div class="form-group">
               <lable>邮寄重量：</lable>
               <input class='form-control' type="text" name="ShipWeight" value="<?php echo $row['ShipWeight'] ?>">
             </div>
@@ -109,7 +117,6 @@ include "connect.php";
 
                ?>
             </div>
-            <td>
               <?php
             if ($row['PackageReturn'] == 'null' ) {
               echo "<lable>退货：</lable>";
@@ -156,7 +163,10 @@ include "connect.php";
 
             }
             ?>
-
+            <div class="form-group">
+              <lable>备注</lable>
+              <textarea name="Notes" rows="8" cols="40" ><?php echo $row['Notes'] ?></textarea>
+            </div>
       <?php
     } ?>
     <div class="form-group">

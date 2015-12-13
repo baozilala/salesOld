@@ -40,6 +40,8 @@ Orders表格（不包含本行）：
 
 <h4>更新日志：</h4>
 <pre>
+  7.
+    添加邮寄日期，邮寄包裹数量，备注功能。
   6.
     sql 增加了 Alias, 在客户页面显示。
     在footer.php增加了mysql_close($con);

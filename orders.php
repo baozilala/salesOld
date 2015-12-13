@@ -28,6 +28,7 @@ include "connect.php";
             <th>数量：</th> -->
             <th><i class="fa fa-truck"></i></th>
             <th><i class="fa fa-plane"></i></th>
+            <th>邮寄日期，数量</th>
             <th><i class="fa fa-balance-scale"></i>、<i class="fa fa-money"></i></th>
             <th><i class="fa fa-cc-visa"></i>、<i class="fa fa-spinner"></i></th>
             <th><i class="fa fa-truck"></i></th>
@@ -47,9 +48,19 @@ include "connect.php";
 <!--               <td><?php echo "$" . $row['Price'] ." 、 "?><?php echo "$" . $row['BuyingPrice'] ?></td>
 <td><?php echo $row['BuyingDate'] ?></td>
 <td><?php echo $row['Unit'] ?></td> -->
+
               <td><?php echo $row['ShipStatus'] ?></td>
-              <td><?php echo $row['ShipChina'] ?></td>
+
+              <td><?php echo $row['ShipChina'];?></td>
+
+              <td><?php
+              if (!empty($row['ShipChinaDate'])) {
+              echo $row['ShipChinaDate']." & ".$row['ShipChinaPackages'];
+              }
+              ?></td>
+
               <td><?php echo $row['ShipWeight'] . "lb~"?><?php echo "$" . $row['ShipPrice'] ?></td>
+
               <td><?php echo $row['Bank'] . "、" ?><?php echo $row['BankStatus'] ?></td>
               <td>
                 <?php

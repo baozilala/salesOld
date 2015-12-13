@@ -23,10 +23,13 @@ include "connect.php";
     Unit='$_POST[Unit]',
     ShipStatus='$_POST[ShipStatus]',
     ShipChina='$_POST[ShipChina]',
+    ShipChinaDate='$_POST[ShipChinaDate]',
+    ShipChinaPackages='$_POST[ShipChinaPackages]',
     ShipWeight='$_POST[ShipWeight]',
     ShipPrice='$_POST[ShipPrice]',
     Bank='$_POST[Bank]',
-    BankStatus='$_POST[BankStatus]'
+    BankStatus='$_POST[BankStatus]',
+    Notes='$_POST[Notes]'
     WHERE id = $_POST[id];";
 
   if (mysql_query($sql,$con)) {
