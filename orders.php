@@ -64,9 +64,9 @@ include "connect.php";
 
               <td>
                   <ul class="list-inline">
-                    <li><a href="order_detail.php?id=<?php echo $row['id'] ?>" class="btn btn-primary btn-xs">详情<a></li>
-                    <li><a href="edit.php?id=<?php echo $row['id'] ?>" class="btn btn-warning btn-xs">修改</a></li>
-                    <li><a href="#" class="btn btn-danger btn-xs">删除</a></li>
+                    <li><a href="order_detail.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-sm">详情<a></li>
+                    <li><a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-warning btn-sm">修改</a></li>
+                    <li><a href="del_order.php?id=<?php echo $row['id']?>" class="btn btn-danger btn-xs">删除</a></li>
                   </ul>
               </td>
             </tr>
@@ -105,11 +105,11 @@ include "connect.php";
           echo "实际".$need_return_orders ."单&nbsp";
           echo $returned . "单需要退货&nbsp";
           echo "已退". $after_return_orders ."单&nbsp"."</pre>";
-          mysql_close($con);
         ?>
         </tfoot>
       </table>
     </div>
   </div>
 </div>
+
 <?php include "footer.php" ?>

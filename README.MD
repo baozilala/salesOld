@@ -40,6 +40,11 @@ Orders表格（不包含本行）：
 
 <h4>更新日志：</h4>
 <pre>
+  6.
+    sql 增加了 Alias, 在客户页面显示。
+    在footer.php增加了mysql_close($con);
+    移除其他页面中手动添加的 mysql_close($con);
+    美化了一下消息的显示方式。
   5.
     改变了 orders.php 的现实方式，更精简，然后添加了详情，详情将会转到 order_detail.php，在这个页面更详细的查看订单。
     添加了分页。

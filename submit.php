@@ -42,11 +42,26 @@ $sql="INSERT INTO
       )";
 
 if (mysql_query($sql,$con)) {
-  echo '插入数据库成功!';
+  echo "
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <div class='alert alert-success' role='alert'>添加成功</div>
+      </div>
+    </div>
+  </div>
+  ";
 }else{
-  echo "插入数据库失败,失败原因：<br>".mysql_error();
+  echo "
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-12'>
+        <div class='alert alert-danger' role='alert'>添加失败</div>".mysql_error()."
+      </div>
+    </div>
+  </div>
+  ";
 }
-mysql_close($con);
 
 include "footer.php"
  ?>

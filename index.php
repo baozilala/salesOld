@@ -59,7 +59,13 @@ include "connect.php";
          <?php while ($row = mysql_fetch_assoc($Customer_List)) {?>
           <tbody>
             <tr>
-              <td><?php echo $row['Name'] ?></td>
+              <td>
+                <?php
+                echo $row['Name'];
+                if (!empty($row['Alias'])) {
+                  echo " (".$row['Alias'].")";
+                }
+              ?></td>
               <td><?php echo $row['Phone'] ?></td>
               <td><?php echo $row['Address'] ?></td>
               <td><?php echo $row['Zip'] ?></td>

@@ -30,11 +30,27 @@ include "connect.php";
     WHERE id = $_POST[id];";
 
   if (mysql_query($sql,$con)) {
-    echo "订单修改成功";
+    echo "
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-12'>
+          <div class='alert alert-success' role='alert'>修改成功</div>
+        </div>
+      </div>
+    </div>
+    ";
   }else{
-    echo "订单修改失败".mysql_error();
+    echo "
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-12'>
+          <div class='alert alert-danger' role='alert'>修改失败</div>
+          ".mysql_error()."
+        </div>
+      </div>
+    </div>
+    ";
   }
-
 
   include "footer.php";
   ?>
