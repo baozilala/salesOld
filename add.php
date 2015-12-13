@@ -50,13 +50,18 @@ include "connect.php";
           </div>
 
           <div class="form-group">
-            <i class="fa fa-dollar"></i> <label>价格：</label>
-            <input type="number" class="form-control" name="Price" placeholder="价格">
+            <i class="fa fa-dollar"></i> <label>返现利率：</label>
+            <input type="text" class="form-control" name="CashBack" placeholder="返现 0.XX">
           </div>
 
           <div class="form-group">
-            <i class="fa fa-dollar"></i> <label>购入价格：</label>
-            <input type="number" class="form-control" name="BuyingPrice" placeholder="购入价格">
+            <i class="fa fa-dollar"></i> <label>购买价格：</label>
+            <input type="text" class="form-control" name="BuyingPrice" placeholder="购入价格">
+          </div>
+
+          <div class="form-group">
+            <i class="fa fa-dollar"></i> <label>收取费用：</label>
+            <input type="text" class="form-control" name="Price" placeholder="价格">
           </div>
 
           <div class="form-group">

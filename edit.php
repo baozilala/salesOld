@@ -11,7 +11,7 @@ include "connect.php";
     <?php
     $Order_List = mysql_query("SELECT * FROM orders WHERE id = $_GET[id]");
     ?>
-      <form class="" action="order_update.php" method="post">
+      <form class="" action="edit_submit.php" method="post">
       <?php
         while($row = mysql_fetch_assoc($Order_List) ){
        ?>
@@ -33,6 +33,10 @@ include "connect.php";
             <div class="form-group">
               <lable>物品名称：</lable>
               <input class='form-control' type="text" name="ProductName" value="<?php echo $row['ProductName'] ?>">
+            </div>
+            <div class="form-group">
+              <i class="fa fa-dollar"></i> <label>返现利率：</label>
+              <input type="text" class="form-control" name="CashBack" placeholder="<?php echo $row['CashBack'] ?>">
             </div>
             <div class="form-group">
               <lable>价格：</lable>

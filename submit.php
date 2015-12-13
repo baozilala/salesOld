@@ -20,7 +20,8 @@ $sql="INSERT INTO
         ShipWeight,
         ShipPrice,
         Bank,
-        BankStatus
+        BankStatus,
+        CashBack
       )
       VALUES(
         '$_POST[Name]',
@@ -38,7 +39,8 @@ $sql="INSERT INTO
         '$_POST[ShipWeight]',
         '$_POST[ShipPrice]',
         '$_POST[Bank]',
-        '$_POST[BankStatus]'
+        '$_POST[BankStatus]',
+        '$_POST[CashBack]'
       )";
 
 if (mysql_query($sql,$con)) {

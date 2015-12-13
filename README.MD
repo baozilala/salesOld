@@ -17,33 +17,40 @@ Customers表格（不包含本行）：
 
 Orders表格（不包含本行）：
   CREATE TABLE `orders` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `Name` char(6) NOT NULL DEFAULT '',
-  `OrderNumber` char(50) DEFAULT NULL,
-  `OrderSite` char(100) NOT NULL,
-  `OrderSiteUrl` char(255) NOT NULL DEFAULT '',
-  `ProductName` varchar(255) NOT NULL DEFAULT '',
-  `Price` float NOT NULL,
-  `BuyingPrice` float NOT NULL,
-  `ShipStatus` char(50) NOT NULL,
-  `BuyingDate` char(50) NOT NULL DEFAULT '',
-  `Unit` int(11) NOT NULL,
-  `ShipChina` char(50) NOT NULL,
-  `ShipChinaDate` char(25) DEFAULT '',
-  `ShipChinaPackages` int(3) DEFAULT NULL,
-  `ShipWeight` float DEFAULT NULL,
-  `ShipPrice` float DEFAULT NULL,
-  `Bank` char(11) NOT NULL,
-  `BankStatus` char(50) NOT NULL,
-  `PackageReturn` tinyint(1) DEFAULT NULL,
-  `ReturnTracking` char(26) DEFAULT NULL,
-  `Notes` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `Name` char(6) NOT NULL DEFAULT '',
+    `OrderNumber` char(50) DEFAULT NULL,
+    `OrderSite` char(100) NOT NULL,
+    `OrderSiteUrl` varchar(255) NOT NULL DEFAULT '',
+    `ProductName` varchar(255) NOT NULL DEFAULT '',
+    `Price` float NOT NULL,
+    `BuyingPrice` float NOT NULL,
+    `ShipStatus` char(50) NOT NULL,
+    `BuyingDate` char(50) NOT NULL DEFAULT '',
+    `Unit` int(11) NOT NULL,
+    `ShipChina` char(50) NOT NULL,
+    `ShipChinaDate` char(25) DEFAULT '',
+    `ShipChinaPackages` int(3) DEFAULT NULL,
+    `ShipWeight` float DEFAULT NULL,
+    `ShipPrice` float DEFAULT NULL,
+    `Bank` char(11) NOT NULL,
+    `BankStatus` char(50) NOT NULL,
+    `PackageReturn` tinyint(1) DEFAULT NULL,
+    `ReturnTracking` char(26) DEFAULT NULL,
+    `Notes` varchar(255) DEFAULT NULL,
+    `CashBack` float DEFAULT NULL,
+    `CashBackMoney` float DEFAULT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 </pre>
 
 <h4>更新日志：</h4>
 <pre>
+  8.
+    Mysql 数据库添加了 Cashback 和 CashBackMoney。
+    添加了 customer_sales_status.php 中的 利润，更精准的计算每笔单子的价格。包含 返现的计算，都会加入到 利润中。
+    在 add.php 页面添加了 CashBack 利率。
+
   7.
     添加邮寄日期，邮寄包裹数量，备注功能。首页欢迎界面。将联系人页面调整到了菜单。
   6.

@@ -29,7 +29,8 @@ include "connect.php";
     ShipPrice='$_POST[ShipPrice]',
     Bank='$_POST[Bank]',
     BankStatus='$_POST[BankStatus]',
-    Notes='$_POST[Notes]'
+    Notes='$_POST[Notes]',
+    CashBack='$_POST[CashBack]'
     WHERE id = $_POST[id];";
 
   if (mysql_query($sql,$con)) {

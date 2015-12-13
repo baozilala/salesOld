@@ -66,6 +66,14 @@ include "connect.php";
                 echo "<a href='http://www.google.com/?q=".$row['ReturnTracking']."' target='_blank'>查单</a>";
               }
               ?></td>
+                <!-- 计算每单得到的CashBackMoney  -->
+              <div class="hidden">
+
+                <?php $CashBackMoney =$row['CashBack'] * $row['BuyingPrice'];
+                  $sql="UPDATE orders SET CashBackMoney = $CashBackMoney Where id =$row[id]";
+                  mysql_query($sql,$con);
+                ?>
+              </div>
 
               <td>
                   <ul class="list-inline">

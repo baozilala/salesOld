@@ -45,6 +45,18 @@ include "connect.php";
         </div>
 
         <div class="">
+          <i class="fa fa-dollar"></i> <label>返现利率：</label>
+          <?php echo $row['CashBack'];
+          ?>
+        </div>
+
+        <div class="">
+          <i class="fa fa-dollar"></i> <label>返现金额：</label>
+          <?php echo $row['CashBackMoney'];
+          ?>
+        </div>
+
+        <div class="">
           <i class="fa fa-dollar"></i> <label>价格：</label>
           <?php echo $row['Price'] ?>
         </div>
