@@ -7,6 +7,7 @@ Customers表格（不包含本行）：
   CREATE TABLE `customers` (
     `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
     `Name` char(50) DEFAULT NULL,
+    `Alias` char(50) DEFAULT NULL,
     `Phone` char(11) DEFAULT NULL,
     `Address` varchar(255) DEFAULT NULL,
     `Zip` char(6) DEFAULT NULL,
@@ -16,32 +17,35 @@ Customers表格（不包含本行）：
 
 Orders表格（不包含本行）：
   CREATE TABLE `orders` (
-    `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-    `Name` char(6) NOT NULL DEFAULT '',
-    `OrderNumber` char(50) DEFAULT NULL,
-    `OrderSite` char(100) NOT NULL,
-    `OrderSiteUrl` char(255) NOT NULL DEFAULT '',
-    `ProductName` varchar(255) NOT NULL DEFAULT '',
-    `Price` float NOT NULL,
-    `BuyingPrice` float NOT NULL,
-    `ShipStatus` char(50) NOT NULL,
-    `BuyingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    `Unit` int(11) NOT NULL,
-    `ShipChina` char(50) NOT NULL,
-    `ShipWeight` float DEFAULT NULL,
-    `ShipPrice` float DEFAULT NULL,
-    `Bank` char(11) NOT NULL,
-    `BankStatus` char(50) NOT NULL,
-    `PackageReturn` tinyint(1) DEFAULT NULL,
-    `ReturnTracking` char(26) DEFAULT NULL,
-    PRIMARY KEY (`id`)
-  ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `Name` char(6) NOT NULL DEFAULT '',
+  `OrderNumber` char(50) DEFAULT NULL,
+  `OrderSite` char(100) NOT NULL,
+  `OrderSiteUrl` char(255) NOT NULL DEFAULT '',
+  `ProductName` varchar(255) NOT NULL DEFAULT '',
+  `Price` float NOT NULL,
+  `BuyingPrice` float NOT NULL,
+  `ShipStatus` char(50) NOT NULL,
+  `BuyingDate` char(50) NOT NULL DEFAULT '',
+  `Unit` int(11) NOT NULL,
+  `ShipChina` char(50) NOT NULL,
+  `ShipChinaDate` char(25) DEFAULT '',
+  `ShipChinaPackages` int(3) DEFAULT NULL,
+  `ShipWeight` float DEFAULT NULL,
+  `ShipPrice` float DEFAULT NULL,
+  `Bank` char(11) NOT NULL,
+  `BankStatus` char(50) NOT NULL,
+  `PackageReturn` tinyint(1) DEFAULT NULL,
+  `ReturnTracking` char(26) DEFAULT NULL,
+  `Notes` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 </pre>
 
 <h4>更新日志：</h4>
 <pre>
   7.
-    添加邮寄日期，邮寄包裹数量，备注功能。
+    添加邮寄日期，邮寄包裹数量，备注功能。首页欢迎界面。将联系人页面调整到了菜单。
   6.
     sql 增加了 Alias, 在客户页面显示。
     在footer.php增加了mysql_close($con);

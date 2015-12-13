@@ -4,77 +4,14 @@ include "navigation.php";
 include "connect.php";
 ?>
 
-<header class="title page-header text-center">
-  <h1><i class="fa fa-users"></i> 客户订单管理系统</h1>
-</header>
+
 
 <div class="container">
   <div class="row">
-    <div class="col-md-2">
-      <form class="" action="submit_customers.php" method="post">
-        <div class="form-group">
-          <i class="fa fa-user"></i> <label>姓名：</label>
-          <input class="form-control" type="text" name="name">
-        </div>
-        <div class="form-group">
-          <i class="fa fa-user-secret"></i> <label>昵称：</label>
-          <input class="form-control" type="text" name="alias">
-        </div>
-        <div class="form-group">
-          <i class="fa fa-mobile"></i> <label>电话：</label>
-          <input class="form-control" type="text" name="phone" maxlength="11">
-        </div>
-        <div class="form-group">
-          <i class="fa fa-map-marler"></i> <label>地址：</label>
-          <input class="form-control" type="text" name="address">
-        </div>
-        <div class="form-group">
-          <i class="fa fa-paper-plane-o"></i> <label>邮编：</label>
-          <input class="form-control" type="text" name="zip" maxlength="6">
-        </div>
-        <div class="form-group">
-          <i class="fa fa-shield"></i> <label>身份证：</label>
-          <input class="form-control" type="text" name="chineseid" maxlength="18">
-        </div>
-        <div class="form-group">
-          <input class="form-control" type="submit" value="Submit">
-        </div>
-      </form>
-    </div>
-    <div class="col-md-10">
-      <table class="table table-striped table-bordered table-hover">
-        <thead>
-          <tr>
-            <th>姓名：</th>
-            <th>电话：</th>
-            <th>地址：</th>
-            <th>邮编：</th>
-            <th>身份证：</th>
-          </tr>
-        </thead>
-
-        <?php
-          $Customer_List = mysql_query("SELECT * FROM customers");
-         ?>
-         <?php while ($row = mysql_fetch_assoc($Customer_List)) {?>
-          <tbody>
-            <tr>
-              <td>
-                <?php
-                echo $row['Name'];
-                if (!empty($row['Alias'])) {
-                  echo " (".$row['Alias'].")";
-                }
-              ?></td>
-              <td><?php echo $row['Phone'] ?></td>
-              <td><?php echo $row['Address'] ?></td>
-              <td><?php echo $row['Zip'] ?></td>
-              <td><?php echo $row['Chineseid'] ?></td>
-            </tr>
-          </tbody>
-           <?php
-            } ?>
-      </table>
+    <div class="col-md-12">
+      <header class="title text-center" style="padding-top:25%; padding-bottom:25%;">
+        <h1><i class="fa fa-users"></i> 客户订单管理系统  <small>浩展工作室</small></h1>
+      </header>
     </div>
   </div>
 </div>

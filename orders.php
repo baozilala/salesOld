@@ -14,6 +14,7 @@ include "connect.php";
         $pagesize=10;
         $p = $_GET['p']?$_GET['p']:1;
         $offset = ($p-1)*$pagesize;
+        //选择数据
         $Order_List = mysql_query("SELECT * FROM orders ORDER BY id DESC LIMIT $offset, $pagesize");
       ?>
       <table class="table table-striped table-bordered table-hover">
@@ -43,16 +44,9 @@ include "connect.php";
             <tr>
               <td><?php echo $row['id'] ?></td>
               <td><?php echo $row['Name'] ?></td>
-<!--               <td><?php echo "<a target='_blank' href='". $row['OrderSiteUrl'] . "'>".$row['OrderSite']." </a>"?><?php echo $row['OrderNumber'] ?></td> -->
               <td><?php echo $row['ProductName'] ?></td>
-<!--               <td><?php echo "$" . $row['Price'] ." 、 "?><?php echo "$" . $row['BuyingPrice'] ?></td>
-<td><?php echo $row['BuyingDate'] ?></td>
-<td><?php echo $row['Unit'] ?></td> -->
-
               <td><?php echo $row['ShipStatus'] ?></td>
-
               <td><?php echo $row['ShipChina'];?></td>
-
               <td><?php
               if (!empty($row['ShipChinaDate'])) {
               echo $row['ShipChinaDate']." & ".$row['ShipChinaPackages'];

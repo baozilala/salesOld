@@ -13,8 +13,9 @@
       </div>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="nav navbar-nav">
-          <li><a href="add.php">订单录入</a></li>
-          <li><a href="orders.php?p=1">订单查询</a></li>
+          <li><a href="add.php">录入订单</a></li>
+          <li><a href="orders.php?p=1">查询订单</a></li>
+          <li><a href="customers.php">顾客查询</a></li>
           <li><a href="customer_sales_status.php">消费统计</a></li>
         </ul>
       </div>
